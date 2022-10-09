@@ -1,0 +1,16 @@
+### Simple Hello
+
+GET http://localhost:8080
+
+### Simple Path Variable
+
+GET http://localhost:8080/1
+
+
+### Two Path Variables
+
+GET http://localhost:8080/1/2
+
+### Simple Hello
+
+GET http://localhost:8080/user

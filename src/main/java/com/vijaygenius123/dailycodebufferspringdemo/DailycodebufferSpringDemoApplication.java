@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class DailycodebufferSpringDemoApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(DailycodebufferSpringDemoApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(DailycodebufferSpringDemoApplication.class, args);
+    }
 
 }
