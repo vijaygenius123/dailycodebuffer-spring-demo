@@ -3,6 +3,7 @@ package com.vijaygenius123.dailycodebufferspringdemo.controller;
 import com.vijaygenius123.dailycodebufferspringdemo.model.User;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -16,12 +17,16 @@ public class HomeController {
     @GetMapping("/{id}")
     public String user(@PathVariable String id) {
         return id;
-
     }
 
     @GetMapping("/{path1}/{path2}")
     public String user(@PathVariable String path1, @PathVariable("path2") String str2) {
         return path1 + " " + str2;
+    }
+
+    @GetMapping("/requestParams")
+    public String requestParam(@RequestParam String name, @RequestParam(value = "email",required = false, defaultValue = "")String emailId) {
+        return "Name "+ name + " Email:" + emailId;
     }
 
     @GetMapping("/user")

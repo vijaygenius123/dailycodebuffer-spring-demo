@@ -14,3 +14,8 @@ GET http://localhost:8080/1/2
 ### Simple Hello
 
 GET http://localhost:8080/user
+
+
+### Request Param
+
+GET http://localhost:8080/requestParams/?name=Vijay&email=vijaygenius123@gmail.com
