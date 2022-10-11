@@ -1,0 +1,34 @@
+### Simple Hello
+
+GET http://localhost:8080
+
+### Simple Path Variable
+
+GET http://localhost:8080/1
+
+
+### Two Path Variables
+
+GET http://localhost:8080/1/2
+
+### Simple Hello
+
+GET http://localhost:8080/user
+
+
+### Request Param
+
+GET http://localhost:8080/requestParams/?name=Vijay&email=vijaygenius123@gmail.com
+
+
+### Request Param
+
+POST http://localhost:8080/employees
+Content-Type: application/json
+
+{
+  "firstName": "Vijay",
+  "lastName": "S",
+  "department": "Engineering",
+  "emailId": "vijaygenius123@gmail.com"
+}
