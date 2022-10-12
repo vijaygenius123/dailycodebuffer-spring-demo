@@ -21,7 +21,7 @@ GET http://localhost:8080/user
 GET http://localhost:8080/requestParams/?name=Vijay&email=vijaygenius123@gmail.com
 
 
-### Request Param
+### Add Employee
 
 POST http://localhost:8080/employees
 Content-Type: application/json
@@ -32,3 +32,12 @@ Content-Type: application/json
   "department": "Engineering",
   "emailId": "vijaygenius123@gmail.com"
 }
+
+### Get All Employees
+
+GET http://localhost:8080/employees
+
+
+### Get Employee By ID
+
+GET http://localhost:8080/employees/75b7129c-e026-4605-9204-4681ec8f277a
