@@ -1,5 +1,6 @@
 package com.vijaygenius123.dailycodebufferspringdemo.service;
 
+import com.vijaygenius123.dailycodebufferspringdemo.exception.EmployeeNotFoundException;
 import com.vijaygenius123.dailycodebufferspringdemo.model.Employee;
 import org.springframework.stereotype.Service;
 
@@ -33,6 +34,6 @@ public class EmployeeServiceImpl implements EmployeeService {
                 .stream()
                 .filter(employee -> employee.getEmployeeId().equals(id))
                 .findFirst()
-                .get();
+                .orElseThrow(() -> new EmployeeNotFoundException("Could not find Employee"));
     }
 }
