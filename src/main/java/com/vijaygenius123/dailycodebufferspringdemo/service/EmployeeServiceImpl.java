@@ -16,7 +16,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public Employee save(Employee employee) {
-        if(employee.getEmployeeId() == null || employee.getEmployeeId().isEmpty()){
+        if (employee.getEmployeeId() == null || employee.getEmployeeId().isEmpty()) {
             employee.setEmployeeId(UUID.randomUUID().toString());
         }
         employees.add(employee);
@@ -35,5 +35,16 @@ public class EmployeeServiceImpl implements EmployeeService {
                 .filter(employee -> employee.getEmployeeId().equals(id))
                 .findFirst()
                 .orElseThrow(() -> new EmployeeNotFoundException("Could not find Employee"));
+    }
+
+    @Override
+    public String deleteEmployeeById(String id) {
+
+        Employee employee = employees.stream()
+                .filter(e -> e.getEmployeeId().equals(id))
+                .findFirst()
+                .get();
+        employees.remove(employee);
+        return "Employee deleted with id " + id;
     }
 }
