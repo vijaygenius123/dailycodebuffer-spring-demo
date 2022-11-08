@@ -21,7 +21,7 @@ GET http://localhost:8080/user
 GET http://localhost:8080/requestParams/?name=Vijay&email=vijaygenius123@gmail.com
 
 
-### Add Employee
+### Add Employee V1
 
 POST http://localhost:8080/employees/v1
 Content-Type: application/json
@@ -35,13 +35,27 @@ Content-Type: application/json
 
 ### Get All Employees
 
-GET http://localhost:8080/employees?mediaType=xml
+GET http://localhost:8080/employees/v1?mediaType=xml
 
 
 ### Get Employee By ID
 
-GET http://localhost:8080/employees/58f6a114-b121-4334-80ad-9eaa069121ec
+GET http://localhost:8080/employees/v1/58f6a114-b121-4334-80ad-9eaa069121ec
 
 ### Delete Employee By ID
 
-DELETE http://localhost:8080/employees/58f6a114-b121-4334-80ad-9eaa069121ec
+DELETE http://localhost:8080/employees/v1/58f6a114-b121-4334-80ad-9eaa069121ec
+
+
+
+### Add Employee V2
+
+POST http://localhost:8080/employees/v2
+Content-Type: application/json
+
+{
+  "firstName": "Vijay",
+  "lastName": "S",
+  "department": "Engineering",
+  "emailId": "vijaygenius123@gmail.com"
+}
