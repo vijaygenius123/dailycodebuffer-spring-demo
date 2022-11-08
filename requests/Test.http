@@ -23,7 +23,7 @@ GET http://localhost:8080/requestParams/?name=Vijay&email=vijaygenius123@gmail.c
 
 ### Add Employee
 
-POST http://localhost:8080/employees
+POST http://localhost:8080/employees/v1
 Content-Type: application/json
 
 {

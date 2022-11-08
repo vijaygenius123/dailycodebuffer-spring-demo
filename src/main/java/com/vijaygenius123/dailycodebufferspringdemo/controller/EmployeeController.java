@@ -3,14 +3,16 @@ package com.vijaygenius123.dailycodebufferspringdemo.controller;
 import com.vijaygenius123.dailycodebufferspringdemo.model.Employee;
 import com.vijaygenius123.dailycodebufferspringdemo.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/employees")
+@RequestMapping("/employees/v1")
 public class EmployeeController {
 
+    @Qualifier("employeeServiceImpl")
     @Autowired
     private EmployeeService employeeService;
 
