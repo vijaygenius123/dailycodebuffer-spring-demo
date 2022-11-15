@@ -54,8 +54,12 @@ POST http://localhost:8080/employees/v2
 Content-Type: application/json
 
 {
-  "firstName": "Vijay",
+  "firstName": "Radha",
   "lastName": "S",
   "department": "Engineering",
-  "emailId": "vijaygenius123@gmail.com"
+  "emailId": "radha@gmail.com"
 }
+
+### Get All Employees V2
+
+GET http://localhost:8080/employees/v2
