@@ -26,4 +26,10 @@ public class EmployeeControllerV2 {
     public List<Employee> getAllEmployees(){
         return employeeService.getAllEmployees();
     }
+
+    @GetMapping("/{id}")
+    public Employee getAllEmployees(@PathVariable String id){
+        return employeeService.getEmployeeById(id);
+    }
+
 }

@@ -63,3 +63,8 @@ Content-Type: application/json
 ### Get All Employees V2
 
 GET http://localhost:8080/employees/v2
+
+
+### Get Employee By ID V2
+
+GET http://localhost:8080/employees/v2/70d4266a-6cc7-464e-9879-76eee618b057
