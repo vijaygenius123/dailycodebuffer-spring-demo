@@ -54,10 +54,10 @@ POST http://localhost:8080/employees/v2
 Content-Type: application/json
 
 {
-  "firstName": "Radha",
-  "lastName": "S",
-  "department": "Engineering",
-  "emailId": "radha@gmail.com"
+  "firstName": "Jarvis",
+  "lastName": "Doggy",
+  "department": "Pets",
+  "emailId": "jarvis@dogs.com"
 }
 
 ### Get All Employees V2
@@ -68,3 +68,7 @@ GET http://localhost:8080/employees/v2
 ### Get Employee By ID V2
 
 GET http://localhost:8080/employees/v2/70d4266a-6cc7-464e-9879-76eee618b057
+
+### Delete Employee By ID
+
+DELETE http://localhost:8080/employees/v2/fbddb913-e671-4c1e-891b-821457082ac7
